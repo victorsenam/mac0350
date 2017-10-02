@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Primeira fase do Projeto}
+\author{Gustavo Silva, Leonardo Padilha, \\Lucas Santos, Marcos Kawakami, \\Matheus Oliveira e Victor Sena Molero}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Objetivo}
+Este sistema tem objetivo de auxiliar o gerenciamento de projetos. Como este objetivo em mente fazemos o uso de segmentar estes em tarefas com o intuito de facilitar o controle e melhorar a modularização.
+
+\section{Funcionalidades do Gerenciador de Projetos}
+\begin{itemize}
+    \item Criar/Remover um projeto
+    \\Todo projeto pode ser criado ou removido. Projetos podem ser removidos somente pelos usuários que estão no grupo de administradores deste, e podem ser criados e neste momento um grupo de usuários administradores é determinado (e pode ser futuramente modificado, por qualquer membro deste grupo).
+    \item Organização das tarefas
+    \\Todo projeto é composto de uma ou mais tarefas, que tem um grupo não vazio de usuários que a administram. Cada usuário pode fazer parte de mais de um grupo de administradores de tarefas. Cada tarefa tem associado a ela uma data de início e de limite.
+\end{itemize}
+
+\section{Requisitos de Dados}
+\begin{itemize}
+    \item Usuário
+    \\ Todo usuário possui um e-mail registrado que o representa univocamente e é utilizado para acessar o sistema, um inteiro (identificador), uma lista dos projetos que participa e uma lista do projetos em que é administrador.
+    %talvez um inteiro com algum começo, ou talvez o hash do email.
+    \item Projeto
+    \\Todo projeto possui um título, e é identificada por um inteiro que o representa univocamente.
+    %aqui q rola o problema do inteiro, q pode confundido com o do usuário
+    \item Tarefa
+    \\Toda tarefa possui data de início e data limite, e é identificada por um inteiro.
+    \item Administrador
+    \\Todo projeto e tarefas possuem administradores que são grupos de usuários que ter permissões.
+    %precisa explicar melhor
+    \item Data limite
+    \\Toda tarefa possui uma data limite
+\end{itemize}
+\section{Requisitos funcionais}
+\begin{itemize}
+    \item Usuário
+    \begin{itemize}
+        \item Uma pessoa pode se cadastrar no sistema de gerenciamento
+        \item Um e-mail pode estar vinculado a somente uma pessoa cadastrada.
+    \end{itemize}
+    \item Projeto
+    \begin{itemize}
+        \item Cada usuário pode criar uma quantidade ilimitada de projetos
+        \item O usuário criador do projeto faz parte por padrão do grupo de administradores (porém pode sair desde caso queira)
+    \end{itemize}
+    \item Tarefa
+    \begin{itemize}
+        \item Qualquer usuário de um projeto pode criar tarefas
+        \item Somente administradores da tarefa podem alterar datas.
+    \end{itemize}
+    \item Administrador
+    \begin{itemize}
+        \item Pode alterar qualquer aspecto da tarefa ou projeto que administra, exceto remover outro administrador.
+    \end{itemize}
+    \item Data limite
+    \begin{itemize}
+        \item Uma vez que uma tarefa é criada, seu criador determina uma data limite
+        \item Uma vez determinada a data limite, esta só pode ser alterada por um administrador da tarefa relacionada ou do projeto na qual a tarefa faz parte.
+    \end{itemize}
+\end{itemize}
+\end{document}
+
