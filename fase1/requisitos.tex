@@ -1,8 +1,8 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 
-\title{Primeira fase do Projeto}
-\author{Gustavo Silva, Leonardo Padilha, \\Lucas Santos, Marcos Kawakami, \\Matheus Oliveira e Victor Sena Molero}
+\title{Primeira fase do projeto de MAC0350}
+\author{Gustavo Silva \\Leonardo Padilha \\Lucas Santos \\Marcos Kawakami - 8041331 \\Matheus Oliveira - 8642821 \\Victor Sena Molero - 8941317}
 \date{}
 
 \begin{document}
@@ -10,57 +10,43 @@
 \maketitle
 
 \section{Objetivo}
-Este sistema tem objetivo de auxiliar o gerenciamento de projetos. Como este objetivo em mente fazemos o uso de segmentar estes em tarefas com o intuito de facilitar o controle e melhorar a modularização.
+Este sistema tem objetivo de auxiliar o gerenciamento de projetos. Para facilitar o controle e melhorar a modularização do projeto, estes são segmentados em tarefas.
 
-\section{Funcionalidades do Gerenciador de Projetos}
+\section{Funcionalidades do gerenciador de projetos}
 \begin{itemize}
-    \item Criar/Remover um projeto
-    \\Todo projeto pode ser criado ou removido. Projetos podem ser removidos somente pelos usuários que estão no grupo de administradores deste, e podem ser criados e neste momento um grupo de usuários administradores é determinado (e pode ser futuramente modificado, por qualquer membro deste grupo).
-    \item Organização das tarefas
-    \\Todo projeto é composto de uma ou mais tarefas, que tem um grupo não vazio de usuários que a administram. Cada usuário pode fazer parte de mais de um grupo de administradores de tarefas. Cada tarefa tem associado a ela uma data de início e de limite.
+    \item Gerenciamento de projeto
+    \\Todo projeto pode ser criado ou removido por um usuário. O usuário que cria o projeto é seu administrador. Cada projeto pode ser removido pelo seu administrador. Cada projeto possui um ou mais usuários. O administrador pode adicionar ou remover usuários do projeto e faz parte do conjunto de usuários do projeto.
+    \item Gerenciamento das tarefas
+    \\Um projeto possui tarefas. Cada tarefa deve possuir um ou mais usuários responsáveis. Um usuário pode ser responsável por várias tarefas. Cada tarefa possui uma data de início e uma data de finalização. Uma tarefa pode ser criada por qualquer usuário do projeto.
 \end{itemize}
 
-\section{Requisitos de Dados}
+\section{Requisitos de dados}
 \begin{itemize}
     \item Usuário
-    \\ Todo usuário possui um e-mail registrado que o representa univocamente e é utilizado para acessar o sistema, um inteiro (identificador), uma lista dos projetos que participa e uma lista do projetos em que é administrador.
-    %talvez um inteiro com algum começo, ou talvez o hash do email.
+    \\ Todo usuário possui um e-mail registrado que o representa univocamente e é utilizado para acessar o sistema, um inteiro (identificador), uma lista dos projetos que participa, uma lista do projetos em que é administrador e uma senha.
     \item Projeto
-    \\Todo projeto possui um título, e é identificada por um inteiro que o representa univocamente.
-    %aqui q rola o problema do inteiro, q pode confundido com o do usuário
+    \\Todo projeto possui um título, um inteiro (identificador), uma lista de tarefas, um usuário administrador e um conjunto de usuários.
     \item Tarefa
-    \\Toda tarefa possui data de início e data limite, e é identificada por um inteiro.
-    \item Administrador
-    \\Todo projeto e tarefas possuem administradores que são grupos de usuários que ter permissões.
-    %precisa explicar melhor
-    \item Data limite
-    \\Toda tarefa possui uma data limite
+    \\Toda tarefa possui data de início e de finalização, um inteiro (identificador) e uma lista de usuários responsáveis.
 \end{itemize}
 \section{Requisitos funcionais}
 \begin{itemize}
     \item Usuário
     \begin{itemize}
-        \item Uma pessoa pode se cadastrar no sistema de gerenciamento
-        \item Um e-mail pode estar vinculado a somente uma pessoa cadastrada.
+        \item Uma pessoa pode se cadastrar no sistema de gerenciamento;
+        \item O usuário pode desativar seu cadastro.
     \end{itemize}
     \item Projeto
     \begin{itemize}
-        \item Cada usuário pode criar uma quantidade ilimitada de projetos
-        \item O usuário criador do projeto faz parte por padrão do grupo de administradores (porém pode sair desde caso queira)
+        \item Cada usuário pode criar uma quantidade ilimitada de projetos;
+        \item O usuário criador do projeto é administrador do projeto;
+        \item O usuário pode convidar usuários a participarem de um projeto do qual é administrador;
+        \item O usuário pode aceitar ou recusar um convite a participar de um projeto;
+        \item Os usuários de um projeto podem criar tarefas naquele projeto.
     \end{itemize}
     \item Tarefa
     \begin{itemize}
-        \item Qualquer usuário de um projeto pode criar tarefas
-        \item Somente administradores da tarefa podem alterar datas.
-    \end{itemize}
-    \item Administrador
-    \begin{itemize}
-        \item Pode alterar qualquer aspecto da tarefa ou projeto que administra, exceto remover outro administrador.
-    \end{itemize}
-    \item Data limite
-    \begin{itemize}
-        \item Uma vez que uma tarefa é criada, seu criador determina uma data limite
-        \item Uma vez determinada a data limite, esta só pode ser alterada por um administrador da tarefa relacionada ou do projeto na qual a tarefa faz parte.
+        \item Qualquer usuário do projeto a qual pertence a tarefa pode editar e remover a tarefa.
     \end{itemize}
 \end{itemize}
 \end{document}
