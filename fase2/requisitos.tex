@@ -1,0 +1,129 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\title{Primeira fase do projeto de MAC0350}
+\author{Gustavo Silva - 9298260\\Leonardo Padilha - 9298295 \\Lucas Santos - 9345064 \\Marcos Kawakami - 8041331 \\Matheus Oliveira - 8642821 \\Victor Sena Molero - 8941317}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Análise de Requisitos}
+
+	\subsection{Introdução}
+	Este sistema tem objetivo de auxiliar o gerenciamento de projetos, incluindo análises de requisitos. Cada projeto será subdividido em atividades, sendo cada atividade relacionada a um requisito do projeto. Ademais, as atividades e projetos estarão associados com um desenvolvedor. Por fim, esse documento tem o objetivo de expor a interação entre os desenvolvedores, os projetos e as atividades tal qual o gerenciamento do projeto como um todo.
+
+	\subsection{Processo de construção de um projeto}
+	[Leozao] Explicar o processo e as duas divisões
+
+	\subsection{Participação de projetos e atividades}
+	Todo projeto pode ser criado ou removido por um desenvolvedor. O administrador do projeto é o desenvolvedor que criou o projeto e esse é o único capaz de removê-lo. É importante ressaltar, todavia, que cada projeto pode possuir mais de um desenvolvedor, ainda que apenas um administrador.
+
+	Um projeto possui atividades e cada atividade representa um requisito que estará presente no projeto. Uma atividade deve possuir um ou mais desenvolvedores responsáveis e um desenvolvedor pode ser responsável por várias atividades. Cada atividade possui uma data de início e uma data de finalização e pode ser criada por qualquer desenvolvedor do projeto.
+
+	\subsection{Funcionalidades dos projetos}
+	\begin{itemize}
+		\item \textbf{Organização das atividades do projeto.} Todo projeto é composto por uma série de atividades que precisam ser cumpridas. Cada atividade possui pelo menos um desenvolvedor associado, que está responsável pela sua entrega.
+
+		\item \textbf{Comunicação entre os desenvolvedores.} Todo projeto possui um fórum de discussão associado. Um fórum de discussão é um conjunto tópicos. Cada tópico deve ser criado por um único desenvolvedor. Um tópico é formado por um conjunto de mensagens ordenadas. Uma mensagem é uma publicação escrita por um desenvolvedor.
+
+		\item \textbf{Controle de datas de entrega das atividades.} Toda atividade possui uma data de início e uma data de entrega associada. Os desenvolvedores podem ter uma visão panorâmica do projeto a partir do cronograma das atividades.
+	\end{itemize}
+
+
+\section{Requisitos de Dados}
+
+	\subsection{Introdução}
+	Fazem parte desse sistema as seguintes entidades:
+	\begin{itemize}
+		\item Desenvolvedor
+		\item Projeto
+		\item Atividade
+		\item Cronograma
+		\item Fórum \textit{(de discussão)}
+		\item Tópico
+		\item Mensagem
+	\end{itemize}
+
+	\subsection{Detalhamento das entidades}
+
+		\subsubsection{Desenvolvedor}
+		Uma representação de uma pessoa, que trabalha como desenvolvedor, no sistema. As informações a serem registradas são o nome, e-mail (para identificação única e autenticação no sistema), senha para acesso.
+
+		\subsubsection{Projeto}
+		Uma representação de um projeto que está sendo ou já foi desenvolvido no sistema. As informações a serem registradas são o nome, uma descrição, uma data de criação e o estado atual do projeto. Cada projeto é univocamente identificado por um atributo-chave inteiro de identificação.
+
+		\subsubsection{Atividade}
+		Uma representação de uma ativdade relacionado a um projeto no sistema. As informações que serão guardadas são o nome, uma descrição, data de início, data de término, a qual projeto essa atividade pertence e o estado dessa atividade (se já foi concluída ou não). Cada atividade é representada por um inteiro.
+
+		\subsubsection{Cronograma}
+		Uma representação de um cronograma de um projeto, com as atividades a serem desenvolvidas. Ao cronograma relacionamos as atividades com estado de não cumprido do projeto. Cada cronograma é representado univocamente por um número inteiro.
+
+		\subsubsection{Fórum (de discussão)}
+		Uma representação de um fórum de discussão de um projeto no sistema. O fórum possui diversos tópicos associados que são criados pelos desenvolvedores. A única informação a ser guardada é a qual projeto o fórum esta associado. Cada fórum é univocamente identificado por um atributo-chave inteiro.
+
+		\subsubsection{Tópico}
+		Uma representação de um tópico relacionado a um fórum de discussões. O tópico possui diversas mensagens associadas que são criadas pelos desenvolvedores. As informações a serem registradas são um título, data de criação, qual fórum o tópico e qual desenvolvedor está associado. Cada tópico é univocamente identificado por um atributo-chave inteiro.
+
+		\subsubsection{Mensagem}
+		Uma representação de uma mensagem enviada por um desenvolvedor relacionada a um tópico. As informações a serem registradas são o texto, a data de criação e o tópico relacionado. Cada mensagem é identificada univocamente por um número inteiro.
+
+
+
+\section{Requisitos Funcionais}
+
+	\subsection{Desenvolvedor}
+	Uma pessoa pode se cadastrar no sistema como desenvolvedor;\\
+	Um desenvolvedor pode remover sua conta do sistema.
+
+	\subsection{Projeto}
+	Um desenvolvedor pode criar vários projetos no sistema;\\
+	O desenvolvedor que criou o projeto passará a ser o administrador do mesmo;\\
+	O administrador pode adicionar diversos desenvolvedores para participar do projeto;\\
+	Os desenvolvedores participantes do projeto podem criar, alterar e remover atividades do projeto;\\
+	O administrador pode remover o projeto do sistema.
+
+	\subsection{Atividade}
+	Qualquer desenvolvedor participante do projeto pode criar uma atividade;\\
+	O desenvolvedor que criou a atividade pode alterâ-la ou removê-la;\\
+	O administrador do projeto pode alterar ou remover qualquer atividade do projeto.
+
+	\subsection{Cronograma}
+
+	\subsection{Fórum (de discussão)}
+
+	\subsection{Tópico}
+
+	\subsection{Mensagem}
+
+
+\section{Operações de criação, leitura, atualização e destrução de dados}
+
+	Monta a lista
+
+
+\section{Modelagem Conceitual}
+
+	\subsection{Modelagem UML}
+
+	\subsection{Modelagem ER-X}
+
+	\subsection{Comparação entre UML e ER-X}
+
+
+
+\section{Modelagem Lógica}
+
+
+
+\section{Modelagem Física}
+	Só menciona a existencia do txt.sql
+
+
+
+
+
+\end{document}
