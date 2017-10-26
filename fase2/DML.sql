@@ -10,28 +10,27 @@ INSERT INTO PROJETO VALUES (1, 'Gerenciador de Projetos', '2017-08-02', 'EM DESE
 INSERT INTO PROJETO VALUES (2, 'API para cidades inteligentes', '2016-06-02', 'EM DESENVOLVIMENTO', 'michael@gmail.com');
 INSERT INTO PROJETO VALUES (3, 'Aplicativo para métodos ageis', '2015-08-12', 'COMPLETO', 'green@gmail.com');
 
--- Inserindo cronogramas de projetos
-INSERT INTO CRONOGRAMA VALUES (1);
-INSERT INTO CRONOGRAMA VALUES (2);
-INSERT INTO CRONOGRAMA VALUES (3);
-
 -- INserindo forum de projetos
 INSERT INTO FORUM VALUES (1);
 INSERT INTO FORUM VALUES (2);
 INSERT INTO FORUM VALUES (3);
 
 -- Inserindo Atividades de projetos
-INSERT INTO ATIVIDADE VALUES (1, 'Levantamento de requisitos', '2017-08-02', '2017-08-10','COMPLETO', 'Levantar os requisitos necessários do projeto', 1);
-INSERT INTO ATIVIDADE VALUES (2, 'Modelagem conceitual', '2017-08-05', '2017-12-15','EM DESENVOLVIMENTO', 'Modelar o projeto usando o modelo ER-X', 1);
-INSERT INTO ATIVIDADE VALUES (3, 'Definição da linguagem a ser utilizada', '2017-09-18', '2017-11-01', 'NÃO INICIADO', NULL, 1);
-INSERT INTO ATIVIDADE VALUES (4, 'Refatoração do código', '2017-07-10', '2017-12-01', 'EM DESENVOLVIMENTO', NULL, 2);
-INSERT INTO ATIVIDADE VALUES (5, 'Otimização de consultas', '2017-07-12', '2017-12-01', 'EM DESENVOLVIMENTO', NULL, 2);
+INSERT INTO ATIVIDADE VALUES (1, 'Levantamento de requisitos', 'Levantar os requisitos necessários do projeto.', '2017-08-02', 'ronaldo@gmail.com', 1, '2017-10-10');
+INSERT INTO ATIVIDADE VALUES (2, 'Modelagem conceitual', 'Modelar o projeto usando o modelo ER-X.', '2017-08-05', 'ronaldo@gmail.com', 1, '2017-12-15');
+INSERT INTO ATIVIDADE VALUES (3, 'Definição da linguagem a ser utilizada', 'Definir a linguagem utilizada para o back-end da nossa aplicação.', '2017-09-18', 'ronaldo@gmail.com', 1, '2017-11-01');
+INSERT INTO ATIVIDADE VALUES (4, 'Refatoração do código', 'Melhorar o design do código sem adicionar nenhuma feature.', '2017-07-10', 'michael@gmail.com', 2, '2017-12-01');
+INSERT INTO ATIVIDADE VALUES (5, 'Otimização de consultas', 'Otimizar as consultas do banco de dados para melhorar o desempenho.', '2017-07-12', 'michael@gmail.com', 2, '2017-12-01');
+INSERT INTO ATIVIDADE VALUES (6, 'Desenvolver o design do app', 'Esboçar o design que será utilizado no aplicativo.', '2016-04-02', 'green@gmail.com', 2, '2016-08-01');
 
 -- Inserindo execuções de atividades de projetos
 INSERT INTO EXECUTA VALUES ('michael@gmail.com', 2);
 INSERT INTO EXECUTA VALUES ('white@gmail.com', 2);
 INSERT INTO EXECUTA VALUES ('logan@gmail.com', 4);
 INSERT INTO EXECUTA VALUES ('green@gmail.com', 5);
+
+-- Inserindo projetos já finalizados
+INSERT INTO FINALIZA VALUES ('michael@gmail.com', 2, '2016-05-01');
 
 -- Inserindo participação de atividades de projetos
 INSERT INTO PARTICIPA VALUES ('green@gmail.com', 1);
@@ -56,9 +55,9 @@ INSERT INTO MENSAGEM VALUES (3, '2017-08-21', 'Eu acho que não', 2, 'green@gmai
 -- Algumas consultas
 SELECT * FROM ATIVIDADE WHERE PID=1;
 
-SELECT DESENVOLVEDOR.NOME 
-    FROM DESENVOLVEDOR, EXECUTA, ATIVIDADE 
-    WHERE EMAIL=DEVEMAIL AND ID=ATVID AND ESTADO='EM DESENVOLVIMENTO';
+SELECT DESENVOLVEDOR.NOME AS NOME_DESENVOLVEDOR, ATIVIDADE.NOME AS NOME_ATIVIDADE
+    FROM DESENVOLVEDOR, FINALIZA, ATIVIDADE 
+    WHERE EMAIL=DEVEMAIL AND ID=ATVID;
 
 SELECT PROJETO.NOME 
     FROM PROJETO, FORUM, TOPICO, MENSAGEM, DESENVOLVEDOR 
