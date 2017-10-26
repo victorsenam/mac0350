@@ -16,11 +16,10 @@
 \contentsline {subsection}{\numberline {3.1}Desenvolvedor}{5}
 \contentsline {subsection}{\numberline {3.2}Projeto}{5}
 \contentsline {subsection}{\numberline {3.3}Atividade}{5}
-\contentsline {subsection}{\numberline {3.4}Cronograma}{5}
-\contentsline {subsection}{\numberline {3.5}F\IeC {\'o}rum (de discuss\IeC {\~a}o)}{5}
-\contentsline {subsection}{\numberline {3.6}T\IeC {\'o}pico}{6}
-\contentsline {subsection}{\numberline {3.7}Mensagem}{6}
-\contentsline {section}{\numberline {4}Opera\IeC {\c c}\IeC {\~o}es de cria\IeC {\c c}\IeC {\~a}o, leitura, atualiza\IeC {\c c}\IeC {\~a}o e destru\IeC {\c c}\IeC {\~a}o de dados mais frequentes}{6}
+\contentsline {subsection}{\numberline {3.4}F\IeC {\'o}rum (de discuss\IeC {\~a}o)}{5}
+\contentsline {subsection}{\numberline {3.5}T\IeC {\'o}pico}{5}
+\contentsline {subsection}{\numberline {3.6}Mensagem}{6}
+\contentsline {section}{\numberline {4}Opera\IeC {\c c}\IeC {\~o}es de cria\IeC {\c c}\IeC {\~a}o, leitura, atualiza\IeC {\c c}\IeC {\~a}o e destrui\IeC {\c c}\IeC {\~a}o de dados mais frequentes}{6}
 \contentsline {section}{\numberline {5}Modelagem Conceitual}{6}
 \contentsline {subsection}{\numberline {5.1}Modelagem ER-X}{6}
 \contentsline {subsection}{\numberline {5.2}Modelagem UML}{8}
