@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{lmodern}
 
 \title{Primeira fase do projeto de MAC0350}
 \author{Gustavo Silva - 9298260\\Leonardo Padilha - 9298295 \\Lucas Santos - 9345064 \\Marcos Kawakami - 8041331 \\Matheus Oliveira - 8642821 \\Victor Sena Molero - 8941317}
@@ -60,10 +61,10 @@
 		Uma representação de uma ativdade relacionado a um projeto no sistema. As informações que serão guardadas são o nome, uma descrição, data de início, data de término, a qual projeto essa atividade pertence e o estado dessa atividade (se já foi concluída ou não). Cada atividade é representada por um inteiro.
 
 		\subsubsection{Cronograma}
-		Uma representação de um cronograma de um projeto, com as atividades a serem desenvolvidas. Ao cronograma relacionamos as atividades com estado de não cumprido do projeto. Cada cronograma é representado univocamente por um número inteiro.
+		Uma representação de um cronograma de um projeto, com as atividades a serem desenvolvidas. Ao cronograma relacionamos as atividades com estado de não cumprido do projeto.
 
 		\subsubsection{Fórum (de discussão)}
-		Uma representação de um fórum de discussão de um projeto no sistema. O fórum possui diversos tópicos associados que são criados pelos desenvolvedores. A única informação a ser guardada é a qual projeto o fórum esta associado. Cada fórum é univocamente identificado por um atributo-chave inteiro.
+		Uma representação de um fórum de discussão de um projeto no sistema. O fórum possui diversos tópicos associados que são criados pelos desenvolvedores. A única informação a ser guardada é a qual projeto o fórum esta associado.
 
 		\subsubsection{Tópico}
 		Uma representação de um tópico relacionado a um fórum de discussões. O tópico possui diversas mensagens associadas que são criadas pelos desenvolvedores. As informações a serem registradas são um título, data de criação, qual fórum o tópico e qual desenvolvedor está associado. Cada tópico é univocamente identificado por um atributo-chave inteiro.
@@ -107,9 +108,13 @@
 
 \section{Modelagem Conceitual}
 
-	\subsection{Modelagem UML}
-
 	\subsection{Modelagem ER-X}
+	Abaixo segue a modelagem usando o modelo Entidade Relacionamento Extendido do nosso sistema:\\
+	\makebox[\textwidth]{\includegraphics[width=14cm]{img/erx.png}}
+	
+	\subsection{Modelagem UML}
+	Abaixo segue a modelagem usando o modelo UML do nosso sistema:\\
+	\makebox[\textwidth]{\includegraphics[width=14cm]{img/uml.png}}
 
 	\subsection{Comparação entre UML e ER-X}
 
