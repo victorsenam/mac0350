@@ -93,6 +93,7 @@ c\documentclass{article}
 	O administrador do projeto pode alterar ou remover qualquer atividade do projeto.
 
 	\subsection{Cronograma}
+	Um desenvolvedor pode alterar o estado de uma atividade que tenha ele vinculado como responsável;\\
 
 	\subsection{Fórum (de discussão)}
 
@@ -111,7 +112,7 @@ c\documentclass{article}
 	\subsection{Modelagem ER-X}
 	Abaixo segue a modelagem usando o modelo Entidade Relacionamento Extendido do nosso sistema:\\
 	\makebox[\textwidth]{\includegraphics[width=14cm]{img/erx.png}}
-	
+
 	\subsection{Modelagem UML}
 	Abaixo segue a modelagem usando o modelo UML do nosso sistema:\\
 	\makebox[\textwidth]{\includegraphics[width=14cm]{img/uml.png}}
@@ -123,14 +124,14 @@ c\documentclass{article}
 
 \section{Modelagem Lógica}
 	Nossa modelagem lógica usará um \textbf{Modelo Relacional}, dado que nosso SGBD também será relacional. Temos, abaixo, o esquema de todas as relações do nosso sistema:\\
-	\makebox[\textwidth]{\includegraphics[width=14cm]{img/relacional.png}}	
+	\makebox[\textwidth]{\includegraphics[width=14cm]{img/relacional.png}}
 
 
 \section{Modelagem Física}
 	Para a modelagem física, vamos dividir em duas partes: a primeira será a criação das relações (DDL) e a segunda será o povoamento do banco de dados com nossas informações (DML).
 	\subsection{DDL}
 		O script de DDL se encontra juntamente com esse documento. Nele, fazemos a criação de todas as relações do sistema, tendo em vista que o SGBD é um PostgreSQL. Diversas restrições de dados podem ser encontradas no script, isso garante que alguns dados sempre estejam presentes nas tuplas.
-		
+
 	\subsection{DML}
 		Para a manipulação de dados, criamos um script (que se encontra juntamente com esse documento) que adiciona diversas informações no banco de dados que criamos anteriormente. Além da população, nosso script também realizará algumas consultas ao banco de dados, são elas:
 		\begin{itemize}
