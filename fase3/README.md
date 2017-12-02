@@ -3,7 +3,7 @@ Entrega 3 - MAC0350
 Autores:
 Gustavo Silva - 9298260
 Leonardo Padilha
-Lucas Santos
+Lucas Santos - 9345064
 Marcos Kawakami
 Matheus Oliveira
 Victor Sena

@@ -8,4 +8,4 @@ python gerenciador/manage.py migrate
 
 echo "Rodando seed..."
 
-psql -U postgres -c DML.sql
+psql -U postgres -f DML.sql
