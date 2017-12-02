@@ -11,7 +11,7 @@ class Projeto(models.Model):
 	ESTADOS = (
 		('C','COMPLETO'),
 		('D','EM DESENVOLVIMENTO'),
-		('N','NÃO INICIADO'),
+		('N','NAO INICIADO'),
 	)
 
 	nome = models.CharField(max_length=30)
